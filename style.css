@@ -229,7 +229,7 @@ nav a:hover{
   border-radius: 20px;
 }
 
-.about p, .services p, .projects p{
+.about p, .services p, .projects p, .testimonials p{
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -464,6 +464,27 @@ nav a:hover{
   padding: 10px;
 }
 
+.project-item:hover{
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(30deg, var(--normal-purple), var(--bright-accent-blue), var(--normal-purple));
+  border-image-slice: 1;
+  border-radius: 10px;
+}
+
+.project-item h3{
+  margin: 10px 0 10px;
+  font-weight: 550;
+  font-style: italic;
+  font-size: 22px;
+}
+
+.project-item p{
+  font-size: 0.85rem;
+  line-height: 1.4;
+  width: 90%;
+  margin: 10px auto 20px;
+}
+
 .project-item .cta-btn{
   display: flex;
   gap: 14px;
@@ -472,8 +493,73 @@ nav a:hover{
   margin: auto;
 }
 
+.project-item img{
+  width: 100%;
+  transition: 0.4s ease-in-out;
+  object-fit: fill;
+}
+
+.project-item img:hover{
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
 .cta-btn img{
   width: 20px;
+}
+
+.testimony-flex{
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.testimony-card{
+  background: rgba( 0, 0, 0, 0.5);
+  padding: 12px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.testimony-text{
+  width: 80%;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.testimony-card img{
+  width: 85px;
+  border-radius: 10px;
+  border: 2px solid var(--text-color);
+}
+
+.testimony-text img{
+  transform: scaleX(-1);
+  width: 120px;
+  border: none;
+  display: flex;
+  margin: 0 50px;
+  justify-self: right;
+}
+
+.testimony-text .w-thin-line{
+  margin: 10px auto;
+  width: 95%;
+  height: 1.5px;
+}
+
+.side-text{
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: right;
+  margin-right: 50px;
 }
 
 .contact{
@@ -679,4 +765,103 @@ footer .heading{
   bottom: 0;
   padding: 15px 0;
   font-size: 1.1rem;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 14px;
+    padding: 0 4px;
+  }
+
+  .container {
+    width: 98%;
+    padding: 10px 2px;
+    border-radius: 10px;
+  }
+
+  .hero {
+    padding: 0 8px;
+    height: 60vh;
+    background-size: cover;
+  }
+
+  .hero-grid {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 2px;
+  }
+
+  .profile {
+    width: 100%;
+    padding: 20px 0 5px;
+  }
+
+  .profile h1 {
+    font-size: 38px;
+  }
+
+  .profile h2 {
+    font-size: 22px;
+    padding-top: 10px;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+    padding-left: 0;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .cta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .services-grid,
+  .project-grid,
+  .tools {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-item,
+  .project-item {
+    grid-column: span 1;
+    padding: 8px;
+  }
+
+  .webstr-profile {
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .achievements {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-flex {
+    flex-direction: column;
+    padding: 10px 2px;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .navigate {
+    width: 100%;
+  }
+
+  .closing-remark {
+    width: 100%;
+  }
 }
