@@ -772,101 +772,164 @@ footer .heading{
   font-size: 1.1rem;
 }
 
-@media screen and (max-width: 500px) {
-  body {
-    font-size: 14px;
-    padding: 0 4px;
+@media (max-width: 435px){
+  .container{
+    width: 95%;
   }
 
-  .container {
-    width: 98%;
-    padding: 10px 2px;
-    border-radius: 10px;
+  .hero{
+    height: 95vh;
+    padding: 0 20px;
   }
 
-  .hero {
-    padding: 0 8px;
-    height: 60vh;
-    background-size: cover;
-  }
-
-  .hero-grid {
+  .hero-grid{
     flex-direction: column;
-    gap: 20px;
-    padding: 0 2px;
+    padding: 0 10px;
   }
 
-  .profile {
+  .hero-grid img{
+    position: relative;
     width: 100%;
-    padding: 20px 0 5px;
+    bottom: auto;
+    left: auto;
+    transform: none;
   }
 
-  .profile h1 {
-    font-size: 38px;
+  .profile h1{
+    font-size: 50px;
+    line-height: 1.1;
   }
 
-  .profile h2 {
-    font-size: 22px;
-    padding-top: 10px;
+  .profile h2{
+    font-size: 28px;
+  
   }
 
-  .hero-text {
+  .profile h3{
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .profile{
     width: 100%;
+    text-align: center;
+  }
+
+  .cta{
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    margin: 10px 0 0;
+  }
+
+  .hero-text{
+    width: 100%;
+    text-align: center;
     padding: 0;
   }
 
-  .hero-text h1 {
-    font-size: 22px;
+  .hero-text h1{
+    font-size: 28px;
     padding-left: 0;
   }
 
-  .hero-text p {
-    font-size: 13px;
+  .hero-text p{
+    font-size: 14px;
     padding-left: 0;
-    margin-top: 10px;
+    padding-left: 15px;
   }
 
-  .cta {
-    flex-direction: column;
-    gap: 8px;
+  .navigation, .profile p{
+   display: none;
   }
 
-  .services-grid,
-  .project-grid,
-  .tools {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .logo img{
+    width: 50px;
+    padding-left: 10px;
   }
 
-  .service-item,
-  .project-item {
-    grid-column: span 1;
-    padding: 8px;
+  header{
+    position: sticky;
+    background: none;
+    border: none;
   }
 
-  .webstr-profile {
-    width: 100%;
+  header, .c-ribbon{
+    padding: 10px 0;
+  }
+
+  .socials{
     gap: 10px;
-    margin-top: 10px;
+    margin: 0;
   }
 
-  .achievements {
+  .abt-flex{
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .webstr-profile, .focus{
+    width: 100%;
+  }
+
+  .services-grid, .project-grid{
+    display: flex;
     flex-direction: column;
-    gap: 8px;
   }
 
-  .footer-flex {
+  .testimonials .container{
+    width: 98%;
+  }
+
+  .testimony-card{
+    padding: 8px 10px;
+    gap: 18px;
+    margin: 0;
+  }
+
+  .project-item p, .testimony-card p{
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .w-thin-line{
+    width: 50%;
+  }
+
+  .testimony-flex{
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact{
+    height: fit-content;
+  }
+
+  .contact-flex{
     flex-direction: column;
-    padding: 10px 2px;
-    gap: 12px;
-    width: 100%;
   }
 
-  .navigate {
-    width: 100%;
+  .contact-flex, .contact-form, .contact-text{
+    padding: 10px;
+    width: 95%;
+    margin: auto;
   }
 
-  .closing-remark {
-    width: 100%;
+  .footer-flex{
+    flex-direction: column;
+  }
+
+  .closing-remark, .ttools{
+    width: 95%;
+  }
+
+  .tools{
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .navigate{
+    display: none;
   }
 }
