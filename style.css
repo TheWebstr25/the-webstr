@@ -799,7 +799,7 @@ footer .heading{
   }
 
   .hero{
-    height: fit-content;
+    height: 95vh;
     padding: 0 15px;
   }
 
@@ -807,6 +807,7 @@ footer .heading{
     justify-content: center;
     flex-direction: column;
     padding: 20px 10px 0;
+    margin-top: -40px;
   }
 
   .profile h1{
@@ -833,6 +834,7 @@ footer .heading{
     width: 90%;
     text-align: center;
     align-items: center;
+    margin-top: -40px;
   }
 
   .cta{
