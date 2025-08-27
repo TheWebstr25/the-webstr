@@ -69,6 +69,7 @@ header, .c-ribbon{
 }
 
 header{
+  animation: from-above 0.7s 1 ease-in-out forwards;
   top: 0;
   left: 0;
   border-bottom: 1px solid transparent;
@@ -126,7 +127,7 @@ nav a:hover{
 }
 
 .bar, .slant{
-  width: 40px;
+  width: 30px;
   height: 4px;
   background: var(--text-color);
   border-radius: 10px;
@@ -843,11 +844,13 @@ footer .heading{
     z-index: 1;
     font-size: 50px;
     line-height: 1.1;
+    animation: from-above 0.7s 1 0.2s ease-in-out forwards;
   }
 
   .profile h2{
     font-size: 28px;
     padding-top: 40px;
+    animation: from-above 0.7s 1 0.4s ease-in-out forwards;
   }
 
   .profile h3{
@@ -856,6 +859,7 @@ footer .heading{
     width: 95%;
     margin:5px auto;
     text-align: center;
+    animation: from-above 0.7s 1 ease-in-out forwards;
   }
 
   .profile{
@@ -898,11 +902,11 @@ footer .heading{
   nav{
     transform: translateX(100%);
     position: absolute;
-    top: 80px;
+    top: 72px;
     right: 0;
     backdrop-filter: blur(8px);
     background: rgba( 0, 0, 0, 0.8);
-    width: 80%;
+    width: 75%;
     height: 100vh;
     border-radius: 20px 0 0 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -914,7 +918,7 @@ footer .heading{
   .navigation{
     justify-content: flex-start;
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
     position: relative;
     height: 90%;
   }
@@ -950,7 +954,7 @@ footer .heading{
   }
 
   .logo img{
-    width: 75px;
+    width: 60px;
     padding: 10px;
     margin-left: 20px;
     background: linear-gradient(to bottom right, var(--dark-purple), var(--bright-accent-blue));
@@ -959,10 +963,10 @@ footer .heading{
 
   header{
     position: fixed;
-    background: none;
-    border: none;
+    background: rgba(0, 0, 0, 0.5);
     padding: 30px 0;
     z-index: 5;
+
   }
 
   header, .c-ribbon{

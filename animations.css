@@ -20,3 +20,65 @@
     transform: rotate(0deg) scale(1.05);
   }
 }
+
+.aura{
+  animation: grand-entry 0.5s both;
+  animation-timeline: view();
+  animation-range: cover 0% 55%;
+}
+
+@keyframes grand-entry{
+  0%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes from-above{
+  0%{
+    opacity: 0;
+    transform: translateY(-500%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+
+.aura-one{
+  animation: from-left 0.7s 1 0.4s ease-in-out;
+}
+
+.aura-two{
+  animation: from-right 0.7s 1 0.6s ease-in-out;
+}
+
+@keyframes from-left{
+  0%{
+    opacity: 0;
+    transform: translateX(-500%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes from-right{
+  0%{
+    opacity: 0;
+    transform: translateX(500%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
