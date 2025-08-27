@@ -91,6 +91,10 @@ header{
   padding-right: 30px;
 }
 
+.mini-cta{
+  display: none;
+}
+
 nav a{
   font-size: 14px;
   transition: 0.4s ease-in-out;
@@ -121,11 +125,36 @@ nav a:hover{
   border-radius: 10px;
 }
 
-.bar{
+.bar, .slant{
   width: 40px;
   height: 4px;
   background: var(--text-color);
   border-radius: 10px;
+}
+
+.close{
+  position: relative;
+  padding: 30px;
+  background: rgba( 0, 0, 0, 0.4);
+  border-radius: 20px;
+  height: 45px;
+  width: 45px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.slant{
+  position: absolute;
+
+}
+
+.slant1{
+  transform: rotate(45deg);
+}
+
+.slant2{
+  transform: rotate(-45deg);
 }
 
 .profile, .hero-text{
@@ -806,18 +835,19 @@ footer .heading{
   .hero-grid{
     justify-content: center;
     flex-direction: column;
-    padding: 20px 10px 0;
-    margin-top: -40px;
+    padding: 100px 10px 0;
+    margin-top: 0px;
   }
 
   .profile h1{
+    z-index: 1;
     font-size: 50px;
     line-height: 1.1;
   }
 
   .profile h2{
     font-size: 28px;
-    padding-top: 20px;
+    padding-top: 40px;
   }
 
   .profile h3{
@@ -858,31 +888,81 @@ footer .heading{
   }
 
   .hero-text p{
-    font-size: 14px;
-    padding-left: 0;
-    padding-left: 15px;
+    display: none;
   }
 
-  .navigation, .profile p{
+  .profile p{
    display: none;
+  }
+
+  nav{
+    transform: translateX(100%);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    backdrop-filter: blur(8px);
+    background: rgba( 0, 0, 0, 0.8);
+    width: 80%;
+    height: 100vh;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--box-shadow);
+    animation:  0.8s 1 forwards ease-in-out;
+    transition:  0.4s ease-in-out;
+  }
+
+  .navigation{
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    height: 90%;
+  }
+
+  .mini-cta{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .mini-cta img{
+    width: 30px;
+  }
+
+  .navigation li{
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1.4px solid transparent;
+    border-image: linear-gradient(to right, var(--normal-purple), var(--bright-accent-blue), var(--normal-purple));
+    border-image-slice: 1;
   }
 
   .ham{
     display: flex;
+    transition: display 0.4s ease-in-out;
+    margin-right: 20px;
+  }
+
+  .close{
+    margin-right: 20px;
   }
 
   .logo img{
     width: 75px;
     padding: 10px;
+    margin-left: 20px;
     background: linear-gradient(to bottom right, var(--dark-purple), var(--bright-accent-blue));
     border-radius: 10px;
   }
 
   header{
-    position: sticky;
+    position: fixed;
     background: none;
     border: none;
-    padding: 20px 0;
+    padding: 30px 0;
+    z-index: 5;
   }
 
   header, .c-ribbon{
@@ -901,6 +981,10 @@ footer .heading{
   .abt-flex{
     flex-direction: column-reverse;
     gap: 20px;
+  }
+
+  .abt, .projects p, .services p, .about p, .testimonials p{
+    font-size: 1rem;
   }
 
   .webstr-profile, .focus{
