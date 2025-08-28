@@ -24,7 +24,7 @@
 .aura{
   animation: grand-entry 0.5s both;
   animation-timeline: view();
-  animation-range: cover 0% 55%;
+  animation-range: cover 0% 40%;
 }
 
 @keyframes grand-entry{
